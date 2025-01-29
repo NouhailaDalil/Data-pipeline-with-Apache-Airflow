@@ -1,0 +1,26 @@
+2025-01-27 22:17:05,263 - INFO - Logging is set up.
+2025-01-27 22:17:05,318 - ERROR - Failed to connect to the database: 'utf-8' codec can't decode byte 0xf4 in position 66: invalid continuation byte
+2025-01-27 22:17:41,008 - INFO - Logging is set up.
+2025-01-27 22:17:41,073 - ERROR - Failed to connect to the database: 'utf-8' codec can't decode byte 0xf4 in position 66: invalid continuation byte
+2025-01-27 22:22:12,785 - INFO - Logging is set up.
+2025-01-27 22:22:12,872 - ERROR - Failed to connect to the database: 'utf-8' codec can't decode byte 0xf4 in position 66: invalid continuation byte
+2025-01-27 22:22:54,954 - INFO - Logging is set up.
+2025-01-27 22:22:55,038 - ERROR - Failed to connect to the database: 'utf-8' codec can't decode byte 0xf4 in position 66: invalid continuation byte
+2025-01-27 22:23:27,621 - INFO - Logging is set up.
+2025-01-27 22:23:27,691 - ERROR - Failed to connect to the database: 'utf-8' codec can't decode byte 0xf4 in position 66: invalid continuation byte
+2025-01-27 22:24:46,166 - INFO - Logging is set up.
+2025-01-27 22:24:46,227 - ERROR - Failed to connect to the database: 'utf-8' codec can't decode byte 0xf4 in position 66: invalid continuation byte
+2025-01-27 22:26:51,286 - INFO - Logging is set up.
+2025-01-27 22:26:51,487 - INFO - Connected to PostgreSQL database.
+2025-01-27 23:19:56,592 - INFO - Logging is set up.
+2025-01-27 23:19:56,888 - INFO - Connected to PostgreSQL database.
+2025-01-27 23:20:09,219 - INFO - Logging is set up.
+2025-01-27 23:20:09,387 - INFO - Connected to PostgreSQL database.
+2025-01-27 23:23:18,144 - INFO - Logging is set up.
+2025-01-27 23:23:18,354 - INFO - Connected to PostgreSQL database.
+2025-01-27 23:23:18,356 - INFO - Created schema 'raw_layer' if it did not exist.
+2025-01-27 23:23:18,357 - INFO - Created schema 'refined_layer' if it did not exist.
+2025-01-27 23:23:18,358 - INFO - Created schema 'report_layer' if it did not exist.
+2025-01-27 23:30:01,786 - INFO - Logging is set up.
+2025-01-27 23:30:02,021 - INFO - Connected to PostgreSQL database.
+2025-01-27 23:30:02,022 - INFO - Created table 'raw_layer.sales' with columns: {'order_id': 'INTEGER', 'order_date': 'DATE', 'customer_id': 'INTEGER', 'customer_name': 'VARCHAR', 'product_id': 'INTEGER', 'product_name': 'VARCHAR', 'quantity': 'INTEGER', 'unit_price': 'DECIMAL(10, 2)', 'payment_method': 'VARCHAR', 'order_status': 'VARCHAR', 'email': 'VARCHAR', 'gender': 'VARCHAR', 'country_code': 'VARCHAR'}.

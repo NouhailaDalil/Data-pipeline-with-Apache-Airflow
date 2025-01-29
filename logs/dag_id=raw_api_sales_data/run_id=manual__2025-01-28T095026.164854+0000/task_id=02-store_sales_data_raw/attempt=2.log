@@ -1,0 +1,145 @@
+[2025-01-28T09:51:23.526+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-28T09:51:23.579+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: raw_api_sales_data.02-store_sales_data_raw manual__2025-01-28T09:50:26.164854+00:00 [queued]>
+[2025-01-28T09:51:23.603+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: raw_api_sales_data.02-store_sales_data_raw manual__2025-01-28T09:50:26.164854+00:00 [queued]>
+[2025-01-28T09:51:23.606+0000] {taskinstance.py:2866} INFO - Starting attempt 2 of 2
+[2025-01-28T09:51:23.980+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): 02-store_sales_data_raw> on 2025-01-28 09:50:26.164854+00:00
+[2025-01-28T09:51:24.000+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=3548) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-28T09:51:24.006+0000] {standard_task_runner.py:72} INFO - Started process 3558 to run task
+[2025-01-28T09:51:24.006+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'raw_api_sales_data', '02-store_sales_data_raw', 'manual__2025-01-28T09:50:26.164854+00:00', '--job-id', '137', '--raw', '--subdir', 'DAGS_FOLDER/raw/dag_load_sales_data_to_db.py', '--cfg-path', '/tmp/tmpzal1dtz1']
+[2025-01-28T09:51:24.010+0000] {standard_task_runner.py:105} INFO - Job 137: Subtask 02-store_sales_data_raw
+[2025-01-28T09:51:24.159+0000] {task_command.py:467} INFO - Running <TaskInstance: raw_api_sales_data.02-store_sales_data_raw manual__2025-01-28T09:50:26.164854+00:00 [running]> on host 1de8b92bf5f9
+[2025-01-28T09:51:24.438+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='raw_api_sales_data' AIRFLOW_CTX_TASK_ID='02-store_sales_data_raw' AIRFLOW_CTX_EXECUTION_DATE='2025-01-28T09:50:26.164854+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-28T09:50:26.164854+00:00'
+[2025-01-28T09:51:24.441+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-01-28T09:51:24.442+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-01-28T09:51:24.444+0000] {logging_mixin.py:190} INFO - Current task name:02-store_sales_data_raw state:running start_date:2025-01-28 09:51:23.581236+00:00
+[2025-01-28T09:51:24.445+0000] {logging_mixin.py:190} INFO - Dag name:raw_api_sales_data and current dag run status:running
+[2025-01-28T09:51:24.446+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-28T09:51:24.507+0000] {database_helpers.py:24} ERROR - Failed to connect to the database: connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+[2025-01-28T09:51:24.510+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/logic/raw_store_sales_data.py", line 16, in store_api_sales_data
+    conn = connect_db(db_path)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/helpers/database_helpers.py", line 14, in connect_db
+    conn = psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+[2025-01-28T09:51:24.573+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2025-01-28T09:51:24.575+0000] {logging_mixin.py:190} INFO - Task start:2025-01-28 09:51:23.581236+00:00 end:2025-01-28 09:51:24.571849+00:00 duration:0.990613
+[2025-01-28T09:51:24.577+0000] {logging_mixin.py:190} INFO - Task:<Task(PythonOperator): 02-store_sales_data_raw> dag:<DAG: raw_api_sales_data> dagrun:<DagRun raw_api_sales_data @ 2025-01-28 09:50:26.164854+00:00: manual__2025-01-28T09:50:26.164854+00:00, state:running, queued_at: 2025-01-28 09:50:26.986660+00:00. externally triggered: True>
+[2025-01-28T09:51:24.578+0000] {logging_mixin.py:190} INFO - Failure caused by connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+[2025-01-28T09:51:24.580+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=raw_api_sales_data, task_id=02-store_sales_data_raw, run_id=manual__2025-01-28T09:50:26.164854+00:00, execution_date=20250128T095026, start_date=20250128T095123, end_date=20250128T095124
+[2025-01-28T09:51:24.621+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-28T09:51:24.623+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 137 for task 02-store_sales_data_raw (connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+; 3558)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/logic/raw_store_sales_data.py", line 16, in store_api_sales_data
+    conn = connect_db(db_path)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/helpers/database_helpers.py", line 14, in connect_db
+    conn = psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+[2025-01-28T09:51:24.713+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-01-28T09:51:24.760+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-28T09:51:24.767+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

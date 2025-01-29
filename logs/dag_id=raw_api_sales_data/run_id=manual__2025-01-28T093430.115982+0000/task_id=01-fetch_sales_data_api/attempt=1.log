@@ -1,0 +1,29 @@
+[2025-01-28T09:34:52.630+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-28T09:34:52.682+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: raw_api_sales_data.01-fetch_sales_data_api manual__2025-01-28T09:34:30.115982+00:00 [queued]>
+[2025-01-28T09:34:52.726+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: raw_api_sales_data.01-fetch_sales_data_api manual__2025-01-28T09:34:30.115982+00:00 [queued]>
+[2025-01-28T09:34:52.730+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-01-28T09:34:53.181+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): 01-fetch_sales_data_api> on 2025-01-28 09:34:30.115982+00:00
+[2025-01-28T09:34:53.206+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=3322) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-28T09:34:53.220+0000] {standard_task_runner.py:72} INFO - Started process 3332 to run task
+[2025-01-28T09:34:53.221+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'raw_api_sales_data', '01-fetch_sales_data_api', 'manual__2025-01-28T09:34:30.115982+00:00', '--job-id', '128', '--raw', '--subdir', 'DAGS_FOLDER/raw/dag_load_sales_data_to_db.py', '--cfg-path', '/tmp/tmplialcuch']
+[2025-01-28T09:34:53.225+0000] {standard_task_runner.py:105} INFO - Job 128: Subtask 01-fetch_sales_data_api
+[2025-01-28T09:34:53.378+0000] {task_command.py:467} INFO - Running <TaskInstance: raw_api_sales_data.01-fetch_sales_data_api manual__2025-01-28T09:34:30.115982+00:00 [running]> on host 1de8b92bf5f9
+[2025-01-28T09:34:53.673+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='raw_api_sales_data' AIRFLOW_CTX_TASK_ID='01-fetch_sales_data_api' AIRFLOW_CTX_EXECUTION_DATE='2025-01-28T09:34:30.115982+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-28T09:34:30.115982+00:00'
+[2025-01-28T09:34:53.677+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-01-28T09:34:53.679+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-01-28T09:34:53.680+0000] {logging_mixin.py:190} INFO - Current task name:01-fetch_sales_data_api state:running start_date:2025-01-28 09:34:52.683980+00:00
+[2025-01-28T09:34:53.685+0000] {logging_mixin.py:190} INFO - Dag name:raw_api_sales_data and current dag run status:running
+[2025-01-28T09:34:53.686+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-28T09:34:55.846+0000] {raw_fetch_sales_api.py:23} INFO - Successfully fetched sales data from the API.
+[2025-01-28T09:34:55.956+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-01-28T09:34:56.003+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-28T09:34:56.006+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=raw_api_sales_data, task_id=01-fetch_sales_data_api, run_id=manual__2025-01-28T09:34:30.115982+00:00, execution_date=20250128T093430, start_date=20250128T093452, end_date=20250128T093456
+[2025-01-28T09:34:56.077+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-01-28T09:34:56.079+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-01-28T09:34:56.087+0000] {logging_mixin.py:190} INFO - Dag name:raw_api_sales_data queued_at:2025-01-28 09:34:30.940163+00:00
+[2025-01-28T09:34:56.096+0000] {logging_mixin.py:190} INFO - Task hostname:1de8b92bf5f9 operator:PythonOperator
+[2025-01-28T09:34:56.191+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-28T09:34:56.306+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-28T09:34:56.315+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

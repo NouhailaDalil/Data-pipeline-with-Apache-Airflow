@@ -1,0 +1,34 @@
+[2025-01-28T20:33:04.121+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-28T20:33:04.157+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: raw_api_sales_data.store_sales_data_raw manual__2025-01-28T20:32:07.733087+00:00 [queued]>
+[2025-01-28T20:33:04.176+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: raw_api_sales_data.store_sales_data_raw manual__2025-01-28T20:32:07.733087+00:00 [queued]>
+[2025-01-28T20:33:04.178+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-01-28T20:33:04.209+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): store_sales_data_raw> on 2025-01-28 20:32:07.733087+00:00
+[2025-01-28T20:33:04.231+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=5679) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-28T20:33:04.235+0000] {standard_task_runner.py:72} INFO - Started process 5681 to run task
+[2025-01-28T20:33:04.236+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'raw_api_sales_data', 'store_sales_data_raw', 'manual__2025-01-28T20:32:07.733087+00:00', '--job-id', '174', '--raw', '--subdir', 'DAGS_FOLDER/raw/dag_load_sales_data_to_db.py', '--cfg-path', '/tmp/tmpdva1w0sh']
+[2025-01-28T20:33:04.238+0000] {standard_task_runner.py:105} INFO - Job 174: Subtask store_sales_data_raw
+[2025-01-28T20:33:04.335+0000] {task_command.py:467} INFO - Running <TaskInstance: raw_api_sales_data.store_sales_data_raw manual__2025-01-28T20:32:07.733087+00:00 [running]> on host 1de8b92bf5f9
+[2025-01-28T20:33:04.509+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='raw_api_sales_data' AIRFLOW_CTX_TASK_ID='store_sales_data_raw' AIRFLOW_CTX_EXECUTION_DATE='2025-01-28T20:32:07.733087+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-28T20:32:07.733087+00:00'
+[2025-01-28T20:33:04.511+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-01-28T20:33:04.512+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-01-28T20:33:04.513+0000] {logging_mixin.py:190} INFO - Current task name:store_sales_data_raw state:running start_date:2025-01-28 20:33:04.158467+00:00
+[2025-01-28T20:33:04.514+0000] {logging_mixin.py:190} INFO - Dag name:raw_api_sales_data and current dag run status:running
+[2025-01-28T20:33:04.515+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-28T20:33:04.849+0000] {database_helpers.py:21} INFO - Connected to PostgreSQL database.
+[2025-01-28T20:33:05.084+0000] {database_helpers.py:21} INFO - Connected to PostgreSQL database.
+[2025-01-28T20:33:05.157+0000] {database_helpers.py:100} INFO - Data successfully inserted into raw_layer.sales.
+[2025-01-28T20:33:05.158+0000] {raw_store_sales_data.py:33} INFO - Successfuly inserted data into raw_layer.sales table
+[2025-01-28T20:33:05.159+0000] {database_helpers.py:31} INFO - Closed the database connection.
+[2025-01-28T20:33:05.161+0000] {raw_store_sales_data.py:39} INFO - Database Closed
+[2025-01-28T20:33:05.162+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-01-28T20:33:05.178+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-28T20:33:05.180+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=raw_api_sales_data, task_id=store_sales_data_raw, run_id=manual__2025-01-28T20:32:07.733087+00:00, execution_date=20250128T203207, start_date=20250128T203304, end_date=20250128T203305
+[2025-01-28T20:33:05.204+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-01-28T20:33:05.205+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-01-28T20:33:05.206+0000] {logging_mixin.py:190} INFO - Dag name:raw_api_sales_data queued_at:2025-01-28 20:32:08.253605+00:00
+[2025-01-28T20:33:05.207+0000] {logging_mixin.py:190} INFO - Task hostname:1de8b92bf5f9 operator:PythonOperator
+[2025-01-28T20:33:05.257+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-28T20:33:05.282+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-28T20:33:05.288+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

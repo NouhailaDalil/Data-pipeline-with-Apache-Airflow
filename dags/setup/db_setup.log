@@ -1,0 +1,50 @@
+2025-01-24 12:18:40,365 - INFO - Logging is set up.
+2025-01-24 12:18:40,390 - ERROR - Failed to connect to the database: ('IM002', '[IM002] [Microsoft][Gestionnaire de pilotes ODBC] Source de données introuvable et nom de pilote non spécifié (0) (SQLDriverConnect); [IM002] [Microsoft][Gestionnaire de pilotes ODBC] Attribut de chaîne de connexion non valide (0)')
+2025-01-24 12:19:27,501 - INFO - Logging is set up.
+2025-01-24 12:19:27,505 - ERROR - Failed to connect to the database: ('IM002', '[IM002] [Microsoft][Gestionnaire de pilotes ODBC] Source de données introuvable et nom de pilote non spécifié (0) (SQLDriverConnect); [IM002] [Microsoft][Gestionnaire de pilotes ODBC] Attribut de chaîne de connexion non valide (0)')
+2025-01-24 12:24:50,690 - INFO - Logging is set up.
+2025-01-24 12:24:50,701 - ERROR - Failed to connect to the database: ('IM002', '[IM002] [Microsoft][Gestionnaire de pilotes ODBC] Source de données introuvable et nom de pilote non spécifié (0) (SQLDriverConnect); [IM002] [Microsoft][Gestionnaire de pilotes ODBC] Attribut de chaîne de connexion non valide (0)')
+2025-01-24 12:40:09,034 - INFO - Logging is set up.
+2025-01-24 12:40:09,045 - ERROR - Failed to connect to the database: ('IM002', '[IM002] [Microsoft][Gestionnaire de pilotes ODBC] Source de données introuvable et nom de pilote non spécifié (0) (SQLDriverConnect)')
+2025-01-24 12:43:27,980 - INFO - Logging is set up.
+2025-01-24 12:43:43,147 - ERROR - Failed to connect to the database: ('08001', "[08001] [Microsoft][ODBC Driver 17 for SQL Server]Fournisseur de canaux nommés : Impossible d'ouvrir une connexion à SQL Server [67].  (67) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Délai d'attente de connexion expiré (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Une erreur liée au réseau ou spécifique à l'instance s'est produite lors de l'établissement d'une connexion à SQL Server. Le serveur est introuvable ou n'est pas accessible. Vérifiez si le nom de l'instance est correct et si SQL Server est configuré pour autoriser les connexions distantes. Pour plus d'informations, consultez la documentation en ligne de SQL Server. (67)")
+2025-01-24 12:45:21,800 - INFO - Logging is set up.
+2025-01-24 12:45:36,973 - ERROR - Failed to connect to the database: ('08001', "[08001] [Microsoft][ODBC Driver 17 for SQL Server]Fournisseur de canaux nommés : Impossible d'ouvrir une connexion à SQL Server [67].  (67) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Délai d'attente de connexion expiré (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Une erreur liée au réseau ou spécifique à l'instance s'est produite lors de l'établissement d'une connexion à SQL Server. Le serveur est introuvable ou n'est pas accessible. Vérifiez si le nom de l'instance est correct et si SQL Server est configuré pour autoriser les connexions distantes. Pour plus d'informations, consultez la documentation en ligne de SQL Server. (67)")
+2025-01-24 12:47:57,601 - INFO - Logging is set up.
+2025-01-24 12:47:57,671 - ERROR - Failed to connect to the database: ('28000', "[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Échec de l'ouverture de session de l'utilisateur\xa0'NOUHAILA/Nouhaila DALIL'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Échec de l'ouverture de session de l'utilisateur\xa0'NOUHAILA/Nouhaila DALIL'. (18456)")
+2025-01-24 12:49:47,073 - INFO - Logging is set up.
+2025-01-24 12:49:47,227 - ERROR - Failed to connect to the database: ('28000', "[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Échec de l'ouverture de session de l'utilisateur\xa0'NOUHAILA\\Nouhaila DALIL'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Échec de l'ouverture de session de l'utilisateur\xa0'NOUHAILA\\Nouhaila DALIL'. (18456)")
+2025-01-24 12:52:11,046 - INFO - Logging is set up.
+2025-01-24 12:52:11,227 - INFO - Connected to SQL Server database.
+2025-01-24 12:52:11,236 - ERROR - Failed to create schema 'raw_layer': ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Syntaxe incorrecte vers le mot clé 'IF'. (156) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Syntaxe incorrecte vers 'raw_layer'. (102)")
+2025-01-24 12:57:24,163 - INFO - Logging is set up.
+2025-01-24 12:57:24,705 - INFO - Connected to SQL Server database.
+2025-01-24 12:57:24,727 - INFO - Created schema 'raw_layer' if it did not exist.
+2025-01-24 12:57:24,728 - INFO - Created schema 'refined_layer' if it did not exist.
+2025-01-24 12:57:24,730 - INFO - Created schema 'report_layer' if it did not exist.
+2025-01-24 12:57:24,742 - ERROR - Failed to create table 'raw_layer.sales': ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Syntaxe incorrecte vers le mot clé 'IF'. (156) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Syntaxe incorrecte vers 'raw_layer'. (102)")
+2025-01-24 12:59:09,137 - INFO - Logging is set up.
+2025-01-24 12:59:09,377 - INFO - Connected to SQL Server database.
+2025-01-24 12:59:09,380 - INFO - Created schema 'raw_layer' if it did not exist.
+2025-01-24 12:59:09,381 - INFO - Created schema 'refined_layer' if it did not exist.
+2025-01-24 12:59:09,381 - INFO - Created schema 'report_layer' if it did not exist.
+2025-01-24 12:59:09,408 - INFO - Created table 'raw_layer.sales' with columns: {'order_id': 'INTEGER', 'order_date': 'DATE', 'customer_id': 'INTEGER', 'customer_name': 'VARCHAR', 'product_id': 'INTEGER', 'product_name': 'VARCHAR', 'quantity': 'INTEGER', 'unit_price': 'DECIMAL(10, 2)', 'payment_method': 'VARCHAR', 'order_status': 'VARCHAR', 'email': 'VARCHAR', 'gender': 'VARCHAR', 'country_code': 'VARCHAR'}.
+2025-01-24 12:59:09,412 - INFO - Created table 'refined_layer.customers' with columns: {'customer_id': 'INTEGER', 'customer_name': 'VARCHAR', 'email': 'VARCHAR', 'gender': 'VARCHAR', 'country_code': 'VARCHAR'}.
+2025-01-24 12:59:09,584 - ERROR - Failed to add column 'ingestion_time' to table 'raw_layer.sales': ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Syntaxe incorrecte vers le mot clé 'COLUMN'. (156) (SQLExecDirectW)")
+2025-01-24 13:06:41,482 - INFO - Logging is set up.
+2025-01-24 13:06:41,695 - INFO - Connected to SQL Server database.
+2025-01-24 13:06:41,700 - INFO - Created schema 'raw_layer' if it did not exist.
+2025-01-24 13:06:41,702 - INFO - Created schema 'refined_layer' if it did not exist.
+2025-01-24 13:06:41,704 - INFO - Created schema 'report_layer' if it did not exist.
+2025-01-24 13:06:41,711 - INFO - Created table 'raw_layer.sales' with columns: {'order_id': 'INTEGER', 'order_date': 'DATE', 'customer_id': 'INTEGER', 'customer_name': 'VARCHAR', 'product_id': 'INTEGER', 'product_name': 'VARCHAR', 'quantity': 'INTEGER', 'unit_price': 'DECIMAL(10, 2)', 'payment_method': 'VARCHAR', 'order_status': 'VARCHAR', 'email': 'VARCHAR', 'gender': 'VARCHAR', 'country_code': 'VARCHAR'}.
+2025-01-24 13:06:41,715 - INFO - Created table 'refined_layer.customers' with columns: {'customer_id': 'INTEGER', 'customer_name': 'VARCHAR', 'email': 'VARCHAR', 'gender': 'VARCHAR', 'country_code': 'VARCHAR'}.
+2025-01-24 13:06:41,771 - ERROR - Failed to add column 'ingestion_time' to table 'raw_layer.sales': ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Syntaxe incorrecte vers le mot clé 'COLUMN'. (156) (SQLExecDirectW)")
+2025-01-24 13:15:51,567 - INFO - Logging is set up.
+2025-01-24 13:15:51,746 - INFO - Connected to SQL Server database.
+2025-01-24 13:15:51,775 - ERROR - Failed to create schema 'raw_layer': ('42S01', "[42S01] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Il existe déjà un objet nommé 'raw_layer' dans la base de données. (2714) (SQLExecDirectW); [42S01] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Échec de CREATE\xa0SCHEMA en raison d'erreurs antérieures. (2759)")
+2025-01-24 13:16:54,671 - INFO - Logging is set up.
+2025-01-24 13:16:54,812 - INFO - Connected to SQL Server database.
+2025-01-24 13:16:54,920 - INFO - Added column 'ingestion_time' to table 'raw_layer.sales'.
+2025-01-24 13:16:54,958 - INFO - Added column 'ingestion_time' to table 'refined_layer.customers'.
+2025-01-24 13:16:54,959 - INFO - Closed the database connection.
+2025-01-24 13:38:04,895 - INFO - Logging is set up.

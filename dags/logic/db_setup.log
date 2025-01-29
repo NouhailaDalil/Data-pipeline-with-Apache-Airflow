@@ -1,0 +1,23 @@
+2025-01-24 13:49:04,732 - INFO - Logging is set up.
+2025-01-24 14:08:51,096 - INFO - Logging is set up.
+2025-01-24 14:10:09,409 - INFO - Logging is set up.
+2025-01-24 14:10:09,432 - INFO - Logging is set up.
+2025-01-28 00:40:26,698 - INFO - Logging is set up.
+2025-01-28 00:43:51,025 - INFO - Logging is set up.
+2025-01-28 01:07:26,620 - INFO - Logging is set up.
+2025-01-28 01:08:46,387 - INFO - Logging is set up.
+2025-01-28 01:09:42,122 - INFO - Logging is set up.
+2025-01-28 01:11:11,125 - INFO - Logging is set up.
+2025-01-28 11:10:24,652 - INFO - Logging is set up.
+2025-01-28 11:10:26,307 - INFO - Successfully fetched sales data from the API.
+2025-01-28 11:10:26,309 - ERROR - Failed to fetch data from API : 'ti'
+2025-01-28 11:12:17,393 - INFO - Logging is set up.
+2025-01-28 11:12:18,947 - INFO - Successfully fetched sales data from the API.
+2025-01-28 11:12:18,949 - ERROR - Failed to fetch data from API : 'ti'
+2025-01-28 11:37:10,321 - INFO - Logging is set up.
+2025-01-28 11:38:15,036 - INFO - Logging is set up.
+2025-01-28 11:59:40,373 - INFO - Logging is set up.
+2025-01-28 11:59:40,410 - INFO - Logging is set up.
+2025-01-28 21:14:39,911 - INFO - Logging is set up.
+2025-01-28 21:16:39,875 - INFO - Logging is set up.
+2025-01-28 21:17:03,720 - INFO - Logging is set up.
